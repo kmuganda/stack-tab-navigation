@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, StyleSheet, Button } from 'react-native';
 import { Icon } from 'react-native-elements';
+import { StackNavigator } from 'react-navigation';
 
 export default class One extends Component {
   static navigationOptions = {
@@ -10,10 +11,12 @@ export default class One extends Component {
       <Icon name="shopping-basket" size={30} color={tintColor} />
   }
   render() {
+    const { navigate } = this.props.navigation;
     return (
-      <View style={styles.container}>
-        <Text>One</Text>
-      </View>
+      <Button
+        title="click to go to One #2"
+        onPress={() => navigate('onea')}
+      />
     );
   }
 }

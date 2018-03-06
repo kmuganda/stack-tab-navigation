@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet } from 'react-native';
 import { Icon } from 'react-native-elements';
 
 export default class Two extends Component {
@@ -10,10 +10,12 @@ export default class Two extends Component {
       <Icon name="shopping-basket" size={30} color={tintColor} />
   }
   render() {
+    const { navigate } = this.props.navigation;
     return (
-      <View style={styles.container}>
-        <Text>Two</Text>
-      </View>
+      <Button
+        title="click to go to Two #2"
+        onPress={() => navigate('twoa')}
+      />
     );
   }
 }

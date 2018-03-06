@@ -4,7 +4,9 @@ import { TabNavigator, StackNavigator } from 'react-navigation';
 import { Icon } from 'react-native-elements';
 
 import One from '../pages/one';
+import Onea from '../pages/onea';
 import Two from '../pages/two';
+import Twoa from '../pages/twoa';
 import Three from '../pages/three';
 import ThreeA from '../pages/threea';
 
@@ -13,12 +15,14 @@ export default class Router extends Component {
     const Footer = TabNavigator({
       one: {
         screen: StackNavigator({
-          one: { screen: One }
+          one: { screen: One },
+          onea: { screen: Onea }
         })
       },
       two: {
         screen: StackNavigator({
-          two: { screen: Two }
+          two: { screen: Two },
+          twoa: { screen: Twoa }
         })
       },
       three: {
